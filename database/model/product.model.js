@@ -1,13 +1,12 @@
 import { Types, Schema, model } from "mongoose";
 
-
 const productSchema = new Schema({
     title: {
         type: String,
         unique: true,
         required: true,
         trim: true,
-        minlength: [10, 'Too Short product Name'],
+        minlength: [5, 'Too Short product Name'],
         maxlength: [100, 'Too long product Name']
     },
     imageCover: {
